@@ -10,9 +10,9 @@ class ContaCorrente extends ContaBancaria
 {
     // Atributos
     const TAXA = 25;
-    const TIPO_CONTA = "Conta corrente";
+    const TIPO_CONTA = "Conta Corrente";
 
-    //
+    // Construtor
     public function __construct(
         string $banco,
         string $nomeTitular,
@@ -21,6 +21,11 @@ class ContaCorrente extends ContaBancaria
         float $saldo
     )
     {
-        self::
+        parent::__construct($banco, $nomeTitular, $numeroAgencia, $numeroConta, $saldo);
+    }
+
+    public function obterSaldo(): string
+    {
+        return "Saldo atual: R$ " . number_format(($this->saldo - self::TAXA), 2, ",", ".");
     }
 }
