@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Tecfi\Devtests;
 
-abstract class ContaBancaria
+use Tecfi\Devtests\Contratos\DadosContaBancaria;
+use Tecfi\Devtests\Contratos\OperacoesContaBancaria;
+
+abstract class ContaBancaria implements DadosContaBancaria, OperacoesContaBancaria
 {
     // Atributos
     protected string $banco;
@@ -27,6 +30,26 @@ abstract class ContaBancaria
         $this->numeroAgencia = $numeroAgencia;
         $this->numeroConta = $numeroConta;
         $this->saldo = $saldo;
+    }
+
+    public function getBanco(): string
+    {
+        return $this->banco;
+    }
+
+    public function getNomeTitular(): string
+    {
+        return $this->nomeTitular;
+    }
+
+    public function getNumeroAgencia(): string
+    {
+        return $this->numeroAgencia;
+    }
+
+    public function getNumeroConta(): string
+    {
+        return $this->numeroConta;
     }
 
     // Métodos
