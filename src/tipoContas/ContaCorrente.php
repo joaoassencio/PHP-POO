@@ -21,7 +21,13 @@ class ContaCorrente extends ContaBancaria
         float $saldo
     )
     {
-        parent::__construct($banco, $nomeTitular, $numeroAgencia, $numeroConta, $saldo);
+        parent::__construct(
+            $banco,
+            $nomeTitular,
+            $numeroAgencia,
+            $numeroConta,
+            $saldo
+        );
     }
 
     public function obterSaldo(): string

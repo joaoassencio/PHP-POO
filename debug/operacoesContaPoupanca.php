@@ -2,10 +2,10 @@
 
 require __DIR__ . "/../vendor/autoload.php";
 
-use Tecfi\Devtests\tipoContas\ContaCorrente;
+use Tecfi\Devtests\tipoContas\ContaPoupanca;
 
-$conta = new ContaCorrente(
-    "Banco do Brasil",
+$conta = new ContaPoupanca(
+    "BRB",
     "João Assêncio",
     "123456-78",
     "321654-98",
