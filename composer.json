@@ -1,0 +1,10 @@
+{
+    "name": "tecfi/devtests",
+    "description": "Aprendizado.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Tecfi\\Devtests\\": "src/"
+        }
+    }
+}
